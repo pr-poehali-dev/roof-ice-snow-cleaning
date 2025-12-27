@@ -40,20 +40,17 @@ const Index = () => {
     {
       name: 'Александр Петров',
       position: 'Руководитель бригады',
-      experience: '12 лет опыта',
-      image: 'https://cdn.poehali.dev/projects/7fae8c8d-7c5d-48ee-b4f3-8e00dfb63592/files/6bfe5a64-bb0b-426e-a3fd-df96b2b86435.jpg'
+      experience: '12 лет опыта'
     },
     {
       name: 'Елена Соколова',
       position: 'Инженер по безопасности',
-      experience: '8 лет опыта',
-      image: 'https://cdn.poehali.dev/projects/7fae8c8d-7c5d-48ee-b4f3-8e00dfb63592/files/1837926c-6db6-6905-a025-5731b014d090.jpg'
+      experience: '8 лет опыта'
     },
     {
       name: 'Дмитрий Волков',
       position: 'Промышленный альпинист',
-      experience: '10 лет опыта',
-      image: 'https://cdn.poehali.dev/projects/7fae8c8d-7c5d-48ee-b4f3-8e00dfb63592/files/d871e729-9e25-4f84-a040-d88ff8cc9e31.jpg'
+      experience: '10 лет опыта'
     }
   ];
 
@@ -64,7 +61,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img 
-                src="https://cdn.poehali.dev/files/logoza.ru.png" 
+                src="https://app.logoza.ru/api/logo/5549ac0dc96244b811b70c9da93d4ed2" 
                 alt="JERP Logo" 
                 className="h-12 w-auto"
               />
@@ -200,15 +197,11 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300">
-                <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardContent className="p-6">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 p-6">
+                <CardContent className="p-0">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <Icon name="User" size={32} className="text-primary" />
+                  </div>
                   <h3 className="font-heading text-xl font-semibold mb-2">{member.name}</h3>
                   <p className="text-primary font-medium mb-2">{member.position}</p>
                   <p className="text-muted-foreground">{member.experience}</p>
@@ -308,7 +301,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <img 
-                src="https://cdn.poehali.dev/files/logoza.ru.png" 
+                src="https://app.logoza.ru/api/logo/5549ac0dc96244b811b70c9da93d4ed2" 
                 alt="JERP Logo" 
                 className="h-12 w-auto mb-4 brightness-0 invert"
               />
