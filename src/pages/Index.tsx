@@ -64,7 +64,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img 
-                src="https://cdn.poehali.dev/files/logoza.ru.png" 
+                src="https://cdn.poehali.dev/files/alpclean.png" 
                 alt="AlpClean - Зеленоград" 
                 className="h-16 w-auto"
               />
@@ -86,7 +86,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <img 
-              src="https://cdn.poehali.dev/files/logoza.ru.png" 
+              src="https://cdn.poehali.dev/files/alpclean.png" 
               alt="AlpClean - Зеленоград" 
               className="h-24 w-auto mx-auto mb-6 animate-fade-in"
             />
@@ -316,9 +316,9 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <img 
-                src="https://cdn.poehali.dev/files/logoza.ru.png" 
+                src="https://cdn.poehali.dev/files/alpclean.png" 
                 alt="AlpClean - Зеленоград" 
-                className="h-16 w-auto mb-4 brightness-0 invert"
+                className="h-16 w-auto mb-4"
               />
               <p className="text-sm text-gray-400">
                 Профессиональная уборка снега и льда с крыш в Зеленограде
