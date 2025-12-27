@@ -22,17 +22,20 @@ const Index = () => {
     {
       icon: 'Snowflake',
       title: 'Очистка кровли от снега',
-      description: 'Профессиональное удаление снежных масс с крыш любой сложности. Используем специализированное оборудование и соблюдаем все нормы безопасности.'
+      description: 'Профессиональное удаление снежных масс с крыш любой сложности. Используем специализированное оборудование и соблюдаем все нормы безопасности.',
+      price: 'от 150 ₽/м²'
     },
     {
       icon: 'AlertTriangle',
       title: 'Удаление наледи и сосулек',
-      description: 'Оперативная ликвидация опасных ледяных образований. Работаем с применением промышленного альпинизма на высоте до 100 метров.'
+      description: 'Оперативная ликвидация опасных ледяных образований. Работаем с применением промышленного альпинизма на высоте до 100 метров.',
+      price: 'от 200 ₽/м²'
     },
     {
       icon: 'Shield',
       title: 'Профилактическое обслуживание',
-      description: 'Регулярный осмотр и своевременная очистка кровли. Предотвращаем образование наледи и снижаем риски для жильцов.'
+      description: 'Регулярный осмотр и своевременная очистка кровли. Предотвращаем образование наледи и снижаем риски для жильцов.',
+      price: 'от 120 ₽/м²'
     }
   ];
 
@@ -61,9 +64,9 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img 
-                src="https://app.logoza.ru/api/logo/5549ac0dc96244b811b70c9da93d4ed2" 
-                alt="JERP Logo" 
-                className="h-12 w-auto"
+                src="https://cdn.poehali.dev/files/logoza.ru.png" 
+                alt="AlpClean - Зеленоград" 
+                className="h-16 w-auto"
               />
             </div>
             <nav className="hidden md:flex items-center gap-6">
@@ -73,7 +76,7 @@ const Index = () => {
             </nav>
             <Button className="hidden md:inline-flex">
               <Icon name="Phone" size={16} className="mr-2" />
-              +7 (495) 123-45-67
+              +7 (499) 735-48-92
             </Button>
           </div>
         </div>
@@ -82,11 +85,16 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
+            <img 
+              src="https://cdn.poehali.dev/files/logoza.ru.png" 
+              alt="AlpClean - Зеленоград" 
+              className="h-24 w-auto mx-auto mb-6 animate-fade-in"
+            />
             <h1 className="font-heading text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Профессиональная уборка снега и льда с крыш
+              AlpClean - Зеленоград
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Обеспечиваем безопасность многоэтажных зданий в зимний период. 
+              Профессиональная уборка снега и льда с крыш многоэтажных зданий. 
               Работаем быстро, качественно и с гарантией.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -113,13 +121,20 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6">
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                <CardContent className="p-6 flex flex-col flex-grow">
                   <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                     <Icon name={service.icon} size={28} className="text-primary" />
                   </div>
                   <h3 className="font-heading text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <p className="text-muted-foreground mb-4 flex-grow">{service.description}</p>
+                  <div className="mt-auto">
+                    <div className="text-2xl font-bold text-primary mb-4">{service.price}</div>
+                    <Button className="w-full" variant="outline">
+                      <Icon name="Calculator" size={18} className="mr-2" />
+                      Узнать стоимость
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -259,7 +274,7 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Телефон</div>
-                    <div className="text-muted-foreground">+7 (495) 123-45-67</div>
+                    <div className="text-muted-foreground">+7 (499) 735-48-92</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -268,7 +283,7 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Email</div>
-                    <div className="text-muted-foreground">info@jerp-cleaning.ru</div>
+                    <div className="text-muted-foreground">info@alpclean-zelenograd.ru</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -277,7 +292,7 @@ const Index = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Адрес</div>
-                    <div className="text-muted-foreground">Москва, ул. Промышленная, 15</div>
+                    <div className="text-muted-foreground">Зеленоград, Центральный проспект, 1</div>
                   </div>
                 </div>
               </div>
@@ -301,12 +316,12 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <img 
-                src="https://app.logoza.ru/api/logo/5549ac0dc96244b811b70c9da93d4ed2" 
-                alt="JERP Logo" 
-                className="h-12 w-auto mb-4 brightness-0 invert"
+                src="https://cdn.poehali.dev/files/logoza.ru.png" 
+                alt="AlpClean - Зеленоград" 
+                className="h-16 w-auto mb-4 brightness-0 invert"
               />
               <p className="text-sm text-gray-400">
-                Профессиональная уборка снега и льда с крыш многоэтажных домов
+                Профессиональная уборка снега и льда с крыш в Зеленограде
               </p>
             </div>
             <div>
@@ -328,14 +343,14 @@ const Index = () => {
             <div>
               <h4 className="font-heading font-semibold mb-4">Контакты</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>+7 (495) 123-45-67</li>
-                <li>info@jerp-cleaning.ru</li>
-                <li>Москва, ул. Промышленная, 15</li>
+                <li>+7 (499) 735-48-92</li>
+                <li>info@alpclean-zelenograd.ru</li>
+                <li>Зеленоград, Центральный проспект, 1</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            © 2024 JERP. Все права защищены.
+            © 2024 AlpClean - Зеленоград. Все права защищены.
           </div>
         </div>
       </footer>
